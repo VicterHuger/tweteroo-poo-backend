@@ -19,6 +19,9 @@ class AuthController {
     res.status(200).send('OK deu tudo certo');
   }
 
+  getLoggedUser(username) {
+    return this.usuarios.find(user => user.username === username)
+  }
 
 }
 
